@@ -2139,7 +2139,7 @@ div.resource-list.resource-list--fill::-webkit-scrollbar-track {
 }
 
 div.resource-list.resource-list--fill::-webkit-scrollbar {
-    width: 10px;
+    width: 14px;
     background-color: #F5F5F5;
 }
 
