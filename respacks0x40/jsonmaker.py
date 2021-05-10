@@ -30,11 +30,11 @@ for FILENAME in arr:
 		for extension in ["png","jpg"]:
 			if file.filename.endswith("."+extension):
 				images_number+=1
-				IMAGES.append(file.filename.replace(".png","").replace(".jpg",""))
+				IMAGES.append(file.filename.replace(".png","").replace(".jpg","").split("/")[-1])
 		for extension in ["ogg","mp3"]:
 			if file.filename.endswith("."+extension):
 				songs_number+=1
-				SONGS.append(file.filename.replace(".ogg","").replace(".mp3",""))
+				SONGS.append(file.filename.replace(".ogg","").replace(".mp3","").split("/")[-1])
 	if title=="":title=FILENAME.replace("zip","")
 	DICTS.append({
         "url": "https://music.weeb.flolep.fr/respacks0x40/%s"%FILENAME,
