@@ -15,10 +15,6 @@
     "prefer_related_applications": false,
      "icons": [
       {
-        "src": "https://music.weeb.flolep.fr/favicon.ico",
-        "sizes": "256x256"
-      },
-      {
         "src": "https://music.weeb.flolep.fr/img/favicon.jpg",
         "sizes": "135x135",
         "type": "image/jpeg"
