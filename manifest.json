@@ -16,8 +16,7 @@
      "icons": [
       {
         "src": "https://music.weeb.flolep.fr/favicon.ico",
-        "sizes": "256x256",
-        "type": "image/x-icon"
+        "sizes": "256x256"
       },
       {
         "src": "https://music.weeb.flolep.fr/img/favicon.jpg",
