@@ -7,13 +7,6 @@
     <!-- Non minified at https://github.com/mon/0x40-web/ -->
     <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="css/hues-min.css">
-<script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
-<script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate"></script>
-<script type="module">
-
-const el = document.createElement('pwa-update');
-document.body.appendChild(el);
-</script>
 
     <script type="text/javascript" src="lib/hues-min.js"></script>
     <script type="text/javascript" src="lib/zip.js"></script>
@@ -43,5 +36,14 @@ document.body.appendChild(el);
 <body>
     This page requires Javascript.
 </body>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate"></script>
+<script type="module">
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/service-worker.js");
+      }
+const el = document.createElement('pwa-update');
+document.body.appendChild(el);
+</script>
 
 </html>
