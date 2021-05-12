@@ -1,4 +1,5 @@
 @font-face {
+    font-display: swap;
     font-family: PetMe64Web;
     font-style: normal;
     font-weight: 400;
@@ -8,6 +9,7 @@
 }
 
 @font-face {
+    font-display: swap;
     font-family: icomoon;
     src: url(../fonts/HuesExtra.eot?gmxg3s);
     src: url(../fonts/HuesExtra.eot?gmxg3s#iefix) format("embedded-opentype"), url(../fonts/HuesExtra.ttf?gmxg3s) format("truetype"), url(../fonts/HuesExtra.woff?gmxg3s) format("woff"), url(../fonts/HuesExtra.svg?gmxg3s#icomoon) format("svg");
@@ -817,6 +819,7 @@ input[type=range]::-ms-thumb {
 
 .hues-m-beatcenter.hues-h-text {
     background: none;
+    background-image: url(../img/skull.png.webp);
     background-image: url(../img/skull.png);
     top: 0;
     width: 42px;
@@ -852,6 +855,7 @@ input[type=range]::-ms-thumb {
 .hues-h-eyes,
 .inverted .hues-h-eyes {
     background: none;
+    background-image: url(../img/skull-eyes.png.webp);
     background-image: url(../img/skull-eyes.png);
     box-shadow: none
 }
@@ -861,11 +865,13 @@ input[type=range]::-ms-thumb {
 }
 
 .hues-h-left-hand {
+    background: url(../img/left-hand.png.webp);
     background: url(../img/left-hand.png);
     left: -15px
 }
 
 .hues-h-right-hand {
+    background: url(../img/right-hand.png.webp);
     background: url(../img/right-hand.png);
     right: -15px
 }
@@ -902,6 +908,8 @@ input[type=range]::-ms-thumb {
     background: none;
     border-style: solid;
     border-width: 0 19px 0 18px;
+    -o-border-image: url(../img/bones.png.webp) 29 19 0 18 repeat stretch;
+    border-image: url(../img/bones.png.webp) 29 19 0 18 fill repeat stretch;
     -o-border-image: url(../img/bones.png) 29 19 0 18 repeat stretch;
     border-image: url(../img/bones.png) 29 19 0 18 fill repeat stretch
 }
@@ -969,11 +977,15 @@ input[type=range]::-ms-thumb {
     z-index: -10;
     border-style: solid;
     border-width: 22px 40px 0 42px;
+    -o-border-image: url(../img/tombstone.png.webp) 22 42 0 stretch;
+    border-image: url(../img/tombstone.png.webp) 22 42 0 fill stretch
     -o-border-image: url(../img/tombstone.png) 22 42 0 stretch;
     border-image: url(../img/tombstone.png) 22 42 0 fill stretch
 }
 
-.inverted .hues-h-tombstone {
+.inverted .hues-h-tombstone {    
+    -o-border-image: url(../img/tombstone_invert.png.webp) 22 42 0 stretch;
+    border-image: url(../img/tombstone_invert.png.webp) 22 42 0 fill stretch
     -o-border-image: url(../img/tombstone_invert.png) 22 42 0 stretch;
     border-image: url(../img/tombstone_invert.png) 22 42 0 fill stretch
 }
@@ -1045,6 +1057,7 @@ input[type=range]::-ms-thumb {
 }
 
 .hues-h-topleft {
+    background-image: url(../img/web-topleft.png.webp);
     background-image: url(../img/web-topleft.png);
     width: 269px;
     height: 237px
@@ -1055,6 +1068,7 @@ input[type=range]::-ms-thumb {
 }
 
 .hues-h-topright {
+    background-image: url(../img/web-topright.png.webp);
     background-image: url(../img/web-topright.png);
     width: 215px;
     height: 220px
@@ -1065,6 +1079,7 @@ input[type=range]::-ms-thumb {
 }
 
 .hues-h-bottomright {
+    background-image: url(../img/web-bottomright.png.webp);
     background-image: url(../img/web-bottomright.png);
     bottom: 0;
     width: 358px;
@@ -1076,6 +1091,7 @@ input[type=range]::-ms-thumb {
 }
 
 .hues-h-vignette {
+    background-image: url(../img/vignette.png.webp);
     background-image: url(../img/vignette.png);
     background-size: 100% 100%;
     width: 100%;
@@ -1994,6 +2010,7 @@ input[type=radio]:checked+.settings-label {
     width: 68px;
     height: 113px;
     transform-origin: 32px 69px;
+    background-image: url(../img/lightbase.png.webp);
     background-image: url(../img/lightbase.png);
     background-position: 0 0;
     background-repeat: no-repeat
@@ -2019,6 +2036,7 @@ input[type=radio]:checked+.settings-label {
 
 .hues-x-lighton {
     opacity: 1;
+    background-image: url(../img/lighton.png.webp);
     background-image: url(../img/lighton.png)
 }
 
@@ -2028,10 +2046,12 @@ input[type=radio]:checked+.settings-label {
 
 .hues-x-lightoff {
     opacity: 0;
+    background-image: url(../img/lightoff.png.webp);
     background-image: url(../img/lightoff.png)
 }
 
 .inverted .hues-x-lightoff {
+    background-image: url(../img/lightoff_inverted.png.webp);
     background-image: url(../img/lightoff_inverted.png)
 }
 
@@ -2064,6 +2084,7 @@ input[type=radio]:checked+.settings-label {
 .hues-x-wiresleft:before {
     width: 60px;
     height: 1435px;
+    background-image: url(../img/wiresleft.png.webp);
     background-image: url(../img/wiresleft.png)
 }
 
@@ -2079,6 +2100,7 @@ input[type=radio]:checked+.settings-label {
     right: 0;
     width: 58px;
     height: 1261px;
+    background-image: url(../img/wiresright.png.webp);
     background-image: url(../img/wiresright.png)
 }
 
@@ -2106,6 +2128,7 @@ input[type=radio]:checked+.settings-label {
     bottom: 0;
     width: 2621px;
     height: 49px;
+    background-image: url(../img/wiresbottom.png.webp);
     background-image: url(../img/wiresbottom.png);
     background-position: 127px -49px
 }
