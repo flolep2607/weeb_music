@@ -28,45 +28,9 @@
             core = new HuesCore(defaults);
         });
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <link rel="icon" type="image/png" sizes="196x196" href="icons/favicon-196.jpg">
-
 <link rel="apple-touch-icon" href="icons/apple-icon-180.jpg">
-
 <meta name="apple-mobile-web-app-capable" content="yes">
-
 <link rel="apple-touch-startup-image" href="icons/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
 <link rel="apple-touch-startup-image" href="icons/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
 <link rel="apple-touch-startup-image" href="icons/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
@@ -102,12 +66,22 @@
 <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate"></script>
 <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/service-worker.js");
-      }
+if ('serviceWorker' in navigator) {
+	window.addEventListener('load', () => {
+		navigator.serviceWorker.register('./service-worker.js').then(
+			registration => {
+				console.log(`ServiceWorker registration successful with scope: ${registration.scope}`);
+			},
+			error => {
+				console.log(`ServiceWorker registration failed: ${error}`);
+			}
+		);
+	});
+}
 const el = document.createElement('pwa-update');
 document.body.appendChild(el);
 </script>
 
 
 </body></html>
+
